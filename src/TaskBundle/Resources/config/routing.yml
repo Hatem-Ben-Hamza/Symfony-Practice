@@ -1,0 +1,7 @@
+task_homepage:
+    path:     /
+    defaults: { _controller: TaskBundle:Default:index }
+
+task_delete:
+    path:     /task_delete/{id}
+    defaults: { _controller: TaskBundle:Default:delete }
