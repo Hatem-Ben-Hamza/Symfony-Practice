@@ -1,3 +1,7 @@
+ecommerce:
+    resource: "@EcommerceBundle/Resources/config/routing.yml"
+    prefix:   /
+
 task:
     resource: "@TaskBundle/Resources/config/routing.yml"
     prefix:   /

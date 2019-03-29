@@ -6,6 +6,12 @@
 <div class="container">
 <table class="table">
 <h4 class="panel-title">Tasks List</h4> 
+{% for message in app.flashes('success') %}
+    <div class="flash-notice">
+        <span class="alert alert-success">{{ message }}</span>
+    </div>
+{% endfor %}
+
 <th>#</th>
 <th>Name</th>
 <th>Description</th>
@@ -27,7 +33,7 @@
 <td>{{ task.dueDate|date('d-m-y') }}</td>
 <td>
 <a href="/task_delete/{{ task.id }}" class="btn btn-danger">Delete</a>
-<a href="#" class="btn btn-warning">Update</a>
+<a href="/task_update/{{ task.id }}" class="btn btn-warning">Update</a>
 
 {% endfor %}
 
